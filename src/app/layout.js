@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-full flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} suppressHydrationWarning min-h-full flex flex-col`}
       >
         <Navbar />
         
