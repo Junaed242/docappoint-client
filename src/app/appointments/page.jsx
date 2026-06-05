@@ -69,7 +69,7 @@ export default function AppointmentsPage() {
       {/* Search and Sort Toolbar */}
       <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-slate-50 p-4 rounded-2xl border border-slate-100">
         
-        {/* Search Form (Using HeroUI v3 Form Component) */}
+        {/* Search Form*/}
         <Form onSubmit={handleSearchSubmit} className="flex gap-2 w-full md:max-w-md">
           <Input
             type="text"
