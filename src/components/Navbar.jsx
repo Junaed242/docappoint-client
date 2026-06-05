@@ -1,10 +1,42 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+import { Button, Avatar } from "@heroui/react";
 import { RiHeartPulseFill } from "react-icons/ri";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const router = useRouter();
+  const { data: session, isPending } = authClient.useSession();
+
+  const handleLogout = async () => {
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success("Successfully logged out!");
+          router.push("/");
+          router.refresh();
+        },
+        onError: (ctx) => {
+          toast.error(ctx.error.message || "Failed to log out.");
+        },
+      },
+    });
+  };
+
+  // Helper function to extract initials for the Fallback component (e.g. "John Doe" -> "JD")
+  const getInitials = (name) => {
+    if (!name) return "U";
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
+  };
+
   return (
     <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -32,26 +64,56 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Auth Buttons (Static) */}
+        {/* Auth Actions (Dynamic) */}
         <div className="flex items-center gap-3">
-          <Button 
-            as={Link} 
-            href="/login" 
-            variant="light" 
-            size="sm" 
-            className="font-medium"
-          >
-            Login
-          </Button>
-          <Button 
-            as={Link} 
-            href="/register" 
-            color="primary" 
-            size="sm" 
-            className="font-bold shadow-sm"
-          >
-            Register
-          </Button>
+          {isPending ? (
+            <span className="text-xs text-slate-400">Checking session...</span>
+          ) : session ? (
+            <div className="flex items-center gap-3">
+              
+              {/* HeroUI v3 Compound Avatar Component */}
+              <Avatar size="sm" color="accent" className="cursor-pointer ring-2 ring-primary">
+                {session.user.image && (
+                  <Avatar.Image src={session.user.image} alt={session.user.name} />
+                )}
+                <Avatar.Fallback>
+                  {getInitials(session.user.name)}
+                </Avatar.Fallback>
+              </Avatar>
+
+              <Button 
+                onPress={handleLogout}
+                color="danger" 
+                variant="flat" 
+                size="sm" 
+                className="font-bold"
+              >
+                Logout
+              </Button>
+            </div>
+          ) : (
+            <>
+              <Link href="/login" passHref>
+                <Button 
+                  variant="light" 
+                  size="sm" 
+                  className="font-medium"
+                >
+                  Login
+                </Button>
+              </Link>
+              
+              <Link href="/register" passHref>
+                <Button 
+                  color="primary" 
+                  size="sm" 
+                  className="font-bold shadow-sm"
+                >
+                  Register
+                </Button>
+              </Link>
+            </>
+          )}
         </div>
 
       </div>
