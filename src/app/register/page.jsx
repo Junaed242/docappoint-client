@@ -112,8 +112,9 @@ const RegisterPage = () => {
 
           <Button
             type="submit"
-            className="w-full bg-primary text-white font-bold h-12 rounded-xl mt-4"
-            isLoading={loading}
+            variant="primary"
+            className="w-full font-bold h-12 text-md mt-2"
+            isPending={loading} 
           >
             Create Account
           </Button>

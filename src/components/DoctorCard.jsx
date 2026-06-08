@@ -56,10 +56,11 @@ const DoctorCard = ({ doctor }) => {
       </Card.Content>
 
       {/* 3. Footer */}
-      <Card.Footer className="pt-4">
+      <Card.Footer>
         <Button
           onPress={handleViewDetails}
-          className="w-full font-bold bg-primary text-white shadow-md"
+          variant="primary"
+          className="w-full font-bold shadow-lg shadow-primary/20"
           size="md"
         >
           View Details

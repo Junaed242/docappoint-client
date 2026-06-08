@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import DoctorCard from "@/components/DoctorCard";
-// Import Form directly from HeroUI to utilize the v3 React Aria form engine
 import { Form, Input, Button, Spinner } from "@heroui/react";
 import { FaSearch } from "react-icons/fa";
 

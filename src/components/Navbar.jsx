@@ -65,13 +65,12 @@ const Navbar = () => {
         </div>
 
         {/* Auth Actions (Dynamic) */}
+        {/* Auth Actions (Dynamic) */}
         <div className="flex items-center gap-3">
           {isPending ? (
             <span className="text-xs text-slate-400">Checking session...</span>
           ) : session ? (
             <div className="flex items-center gap-3">
-              
-              {/* HeroUI v3 Compound Avatar Component */}
               <Avatar size="sm" color="accent" className="cursor-pointer ring-2 ring-primary">
                 {session.user.image && (
                   <Avatar.Image src={session.user.image} alt={session.user.name} />
@@ -81,10 +80,10 @@ const Navbar = () => {
                 </Avatar.Fallback>
               </Avatar>
 
+              {/* Updated: color="danger" variant="flat" -> variant="danger-soft" */}
               <Button 
                 onPress={handleLogout}
-                color="danger" 
-                variant="flat" 
+                variant="danger-soft" 
                 size="sm" 
                 className="font-bold"
               >
@@ -93,19 +92,21 @@ const Navbar = () => {
             </div>
           ) : (
             <>
+              {/* Updated: variant="light" -> variant="tertiary" */}
               <Link href="/login" passHref>
                 <Button 
-                  variant="light" 
+                  variant="tertiary" 
                   size="sm" 
-                  className="font-medium"
+                  className="font-medium text-black"
                 >
                   Login
                 </Button>
               </Link>
               
+              {/* Updated: color="primary" -> variant="primary" */}
               <Link href="/register" passHref>
                 <Button 
-                  color="primary" 
+                  variant="primary" 
                   size="sm" 
                   className="font-bold shadow-sm"
                 >
