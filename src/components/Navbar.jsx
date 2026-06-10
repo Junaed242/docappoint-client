@@ -64,8 +64,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Auth Actions (Dynamic) */}
-        {/* Auth Actions (Dynamic) */}
+        
         <div className="flex items-center gap-3">
           {isPending ? (
             <span className="text-xs text-slate-400">Checking session...</span>

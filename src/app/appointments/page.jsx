@@ -12,7 +12,6 @@ export default function AppointmentsPage() {
 
   // Fetch doctors (handles initial load and search queries)
   const fetchDoctors = (searchQuery = "") => {
-    setLoading(true);
     const url = searchQuery 
       ? `${process.env.NEXT_PUBLIC_BASE_URL}/doctors?search=${encodeURIComponent(searchQuery)}`
       : `${process.env.NEXT_PUBLIC_BASE_URL}/doctors`;
@@ -35,6 +34,7 @@ export default function AppointmentsPage() {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     fetchDoctors(search);
   };
 
@@ -75,7 +75,7 @@ export default function AppointmentsPage() {
             placeholder="Search by Doctor Name..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="flex-grow"
+            className="grow"
             variant="bordered"
             startcontent={<FaSearch className="text-slate-400" />}
           />
@@ -122,7 +122,7 @@ export default function AppointmentsPage() {
         <div className="text-center py-20 border border-dashed border-slate-200 rounded-3xl bg-slate-50/50">
           <p className="text-lg font-bold text-slate-700 mb-2">No Doctors Found</p>
           <p className="text-sm text-slate-400">
-            We couldn't find any specialist matching "{search}". Try another search.
+            We couldn&apos;t find any specialist matching &quot;{search}&quot;. Try another search.
           </p>
           <Button 
             onPress={() => { setSearch(""); fetchDoctors(); }} 
