@@ -29,7 +29,7 @@ const LoginPage = () => {
     if (data) {
       toast.success("Login successful!");
       router.push(redirectUrl);
-      router.refresh(); // Reloads Navbar to show session immediately
+      router.refresh();  
     }
 
     if (error) {

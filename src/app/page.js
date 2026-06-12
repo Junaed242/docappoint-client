@@ -3,25 +3,31 @@ import TopDoctors from "@/components/TopDoctors";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16 pb-20">
+    <div className="flex flex-col gap-16">
       {/* 1. Hero Banner Section */}
       <section>
         <Banner />
       </section>
 
       {/* 2. Top Rated Doctors Section */}
-      <section className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+      <section className="container mx-auto px-4 py-8">
+        <div className="text-center mb-16 relative">
+          {/* Subtle medical background accent */}
+          
+
+          <span className="text-xs font-bold uppercase text-primary tracking-widest bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-3">
+            Our Specialists
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-800 mb-4 tracking-tight">
             Top Rated Doctors
           </h2>
-          <p className="text-slate-500 max-w-2xl mx-auto">
-            Experience world-class healthcare with our most highly recommended specialists, 
-            rated by thousands of satisfied patients.
+          <p className="text-slate-500 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+            Experience world-class healthcare with our highly recommended clinical specialists, 
+            trusted by thousands of families.
           </p>
         </div>
         
-        {/* Dynamic Data Fetching Section */}
+        {/* Dynamic Doctor Fetch Section */}
         <TopDoctors />
       </section>
 

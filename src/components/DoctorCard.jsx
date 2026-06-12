@@ -19,19 +19,17 @@ const DoctorCard = ({ doctor }) => {
   };
 
   return (
-    <Card className="p-4 bg-white border border-slate-100 shadow-sm transition-all hover:shadow-lg">
-      
-      {/* 1. Header (Using Card.Header & Card.Title from v3 docs) */}
-      <Card.Header className="flex-col items-start gap-1 pb-3">
-        <span className="text-[10px] font-bold uppercase text-primary tracking-widest">
+    <Card className="p-4 bg-white border border-slate-100/80 shadow-sm rounded-3xl card-hover-effect">
+      <Card.Header className="flex-col items-start gap-1 pb-4">
+        <span className="text-[10px] font-bold uppercase text-primary tracking-widest bg-blue-50/50 px-2.5 py-1 rounded-md">
           {doctor.specialty}
         </span>
-        <Card.Title className="text-xl font-bold text-slate-800 tracking-tight">
+        <Card.Title className="text-xl font-extrabold text-slate-800 tracking-tight mt-1">
           {doctor.name}
         </Card.Title>
-        <div className="flex items-center gap-1">
-          <FaStar className="text-amber-400" size={12} />
-          <span className="text-xs font-semibold text-slate-500">
+        <div className="flex items-center gap-1.5 mt-1">
+          <FaStar className="text-amber-400" size={13} />
+          <span className="text-xs font-bold text-slate-500">
             {doctor.rating} Rating
           </span>
         </div>

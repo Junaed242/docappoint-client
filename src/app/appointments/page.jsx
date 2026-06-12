@@ -8,7 +8,7 @@ export default function AppointmentsPage() {
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [sortBy, setSortBy] = useState("default"); // 'default', 'fee-asc', 'fee-desc'
+  const [sortBy, setSortBy] = useState("default"); 
 
   // Fetch doctors (handles initial load and search queries)
   const fetchDoctors = (searchQuery = "") => {
@@ -38,7 +38,7 @@ export default function AppointmentsPage() {
     fetchDoctors(search);
   };
 
-  // Sort logic (Optional Challenge)
+  // Sort logic
   const getSortedDoctors = () => {
     const doctorsCopy = [...doctors];
     if (sortBy === "fee-asc") {

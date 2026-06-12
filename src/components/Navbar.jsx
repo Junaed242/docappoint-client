@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <nav className="border-b rounded-xl m-3 border border-white/30 bg-white/30  backdrop-invert backdrop-opacity-10 sticky top-2 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         
         {/* Logo & Name */}
@@ -52,7 +52,7 @@ const Navbar = () => {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-900">
           <Link href="/" className="hover:text-primary transition-colors">
             Home
           </Link>

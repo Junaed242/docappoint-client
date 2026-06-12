@@ -1,3 +1,34 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 @plugin "daisyui";
+
+@theme {
+  --color-primary: #0284c7;       /* Clinical sky blue */
+  --color-secondary: #0d9488;     /* Modern wellness teal */
+  --color-accent: #0284c7;        /* Map HeroUI accent to primary */
+  --color-background: #f8fafc;    /* Clean, soft light-blue gray */
+  --color-surface: #ffffff;       /* Pure white panels */
+  --color-foreground: #0f172a;    /* Deep slate text (highly readable) */
+}
+
+/* Force standard light theme styles */
+:root {
+  --background: #f8fafcef;
+  --foreground: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-sans);
+}
+
+/* Custom smooth transitions for card interactions */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(2, 132, 199, 0.15);
+}

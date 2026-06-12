@@ -22,7 +22,7 @@ const RegisterPage = () => {
       email: user.email,
       password: user.password,
       name: user.name,
-      image: user.image, // Better-auth uses 'image' for avatars
+      image: user.image,
     });
 
     if (data) {

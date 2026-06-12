@@ -5,7 +5,6 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
