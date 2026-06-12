@@ -130,7 +130,7 @@ export default function DoctorDetails({ params }) {
 
           {/* Hospital and Fee Info */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
-            <div className="flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-purple-800 shadow-sm">
+            <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-100 shadow-purple-800 shadow-sm">
               <div className="p-3 bg-blue-50 text-primary rounded-xl text-xl"><FaHospital /></div>
               <div>
                 <p className="text-xs text-slate-400 font-semibold">Hospital</p>
@@ -138,7 +138,7 @@ export default function DoctorDetails({ params }) {
               </div>
             </div>
             
-            <div className="flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-purple-800 shadow-sm">
+            <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-100 shadow-purple-800 shadow-sm">
               <div className="p-3 bg-green-50 text-green-600 rounded-xl text-xl"><FaMoneyBillWave /></div>
               <div>
                 <p className="text-xs text-slate-400 font-semibold">Consultation Fee</p>

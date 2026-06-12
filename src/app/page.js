@@ -3,7 +3,7 @@ import TopDoctors from "@/components/TopDoctors";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-15">
       {/* 1. Hero Banner Section */}
       <section>
         <Banner />
@@ -32,7 +32,7 @@ export default function Home() {
       </section>
 
       {/* 3. Additional Section: Specialties */}
-      <section className="bg-slate-50 py-16 -mx-4 px-4">
+      <section className=" py-16  px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10 text-slate-800">Our Specialties</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
