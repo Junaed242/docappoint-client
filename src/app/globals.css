@@ -3,15 +3,14 @@
 @plugin "daisyui";
 
 @theme {
-  --color-primary: #0284c7;       /* Clinical sky blue */
-  --color-secondary: #0d9488;     /* Modern wellness teal */
-  --color-accent: #0284c7;        /* Map HeroUI accent to primary */
-  --color-background: #f8fafc;    /* Clean, soft light-blue gray */
-  --color-surface: #ffffff;       /* Pure white panels */
-  --color-foreground: #0f172a;    /* Deep slate text (highly readable) */
+  --color-primary: #0284c7;       
+  --color-secondary: #0d9488;
+  --color-accent: #0284c7;        
+  --color-background: #f8fafc;    
+  --color-surface: #ffffff;      
+  --color-foreground: #0f172a;    
 }
 
-/* Force standard light theme styles */
 :root {
   --background: #f8fafcef;
   --foreground: #0f172a;

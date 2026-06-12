@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         
-        {/* Main content grows to push footer down */}
         <main className="grow">
           {children}
         </main>

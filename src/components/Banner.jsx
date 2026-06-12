@@ -47,40 +47,41 @@ const Banner = () => {
               className="relative w-full h-full bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              {/* Responsive Gradient Overlay */}
               <div className="absolute inset-0 bg-linear-to-r from-blue-950/95 via-blue-900/70 to-blue-900/30 md:to-transparent flex items-center">
                 
                 <div className="text-left px-6 sm:px-10 md:px-20 w-full max-w-4xl">
-                  {/* Smaller font on mobile (text-3xl) vs Desktop (md:text-6xl) */}
                   <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight">
                     {slide.title}
                   </h1>
                   
-                  {/* Smaller description on mobile */}
                   <p className="text-base md:text-xl text-blue-100 mb-8 md:mb-10 leading-relaxed max-w-2xl line-clamp-3 md:line-clamp-none">
                     {slide.description}
                   </p>
                   
-                  {/* Stack buttons on mobile (flex-col), side-by-side on tablet+ (sm:flex-row) */}
                   <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                    <Button
-                      as={Link}
-                      href="/appointments"
-                      color="primary"
-                      size="lg"
-                      className="font-bold px-8 h-12 md:h-14 text-sm md:text-md shadow-xl"
-                    >
-                      Find a Doctor
-                    </Button>
-                    <Button
-                      as={Link}
-                      href="/register"
-                      variant="bordered"
-                      className="text-white border-white/40 hover:bg-white hover:text-blue-950 font-bold px-8 h-12 md:h-14 text-sm md:text-md"
-                      size="lg"
-                    >
-                      Join Now
-                    </Button>
+                    
+                    {/* Button 1: Find a Doctor */}
+                    <Link href="/appointments" passHref>
+                      <Button
+                        variant="primary"
+                        size="lg"
+                        className="font-bold px-8 h-12 md:h-14 text-sm md:text-md shadow-xl w-full sm:w-auto"
+                      >
+                        Find a Doctor
+                      </Button>
+                    </Link>
+
+                    {/* Button 2: Join Now */}
+                    <Link href="/register" passHref>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="text-white border-white/40 hover:bg-white hover:text-blue-950 font-bold px-8 h-12 md:h-14 w-full sm:w-auto"
+                      >
+                        Join Now
+                      </Button>
+                    </Link>
+
                   </div>
                 </div>
               </div>

@@ -120,12 +120,7 @@ const RegisterPage = () => {
           </Button>
         </Form>
 
-        {/* Separator */}
-        <div className="flex justify-center items-center gap-3 my-6">
-          <Separator className="grow" />
-          <div className="whitespace-nowrap text-xs text-slate-400">Or sign up with</div>
-          <Separator className="grow" />
-        </div>
+        
 
         {/* Google Signup Button */}
         <div>

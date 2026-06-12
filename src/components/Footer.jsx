@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Multi-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12">
           
-          {/* Column 1: Brand Mission (Spans 5 cols) */}
+          {/* Column 1: Brand Mission*/}
           <div className="md:col-span-5 flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <div className="text-primary text-3xl">
@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Column 2: Quick Links (Spans 3 cols) */}
+          {/* Column 2: Quick Links*/}
           <div className="md:col-span-3 flex flex-col gap-4">
             <h4 className="text-sm font-bold text-slate-800 uppercase tracking-widest">
               Quick Links

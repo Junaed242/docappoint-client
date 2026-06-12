@@ -89,12 +89,7 @@ const LoginPage = () => {
           </Button>
         </Form>
 
-        {/* Separator */}
-        <div className="flex justify-center items-center gap-3 my-6">
-       
-          <div className="whitespace-nowrap text-xs text-slate-400">Or sign in with</div>
-          
-        </div>
+        
 
         {/* Google Signin Button */}
         <div>

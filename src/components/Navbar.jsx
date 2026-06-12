@@ -79,7 +79,6 @@ const Navbar = () => {
                 </Avatar.Fallback>
               </Avatar>
 
-              {/* Updated: color="danger" variant="flat" -> variant="danger-soft" */}
               <Button 
                 onPress={handleLogout}
                 variant="danger-soft" 
@@ -91,7 +90,6 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              {/* Updated: variant="light" -> variant="tertiary" */}
               <Link href="/login" passHref>
                 <Button 
                   variant="tertiary" 
@@ -102,7 +100,6 @@ const Navbar = () => {
                 </Button>
               </Link>
               
-              {/* Updated: color="primary" -> variant="primary" */}
               <Link href="/register" passHref>
                 <Button 
                   variant="primary" 

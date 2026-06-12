@@ -10,7 +10,7 @@ export default function AppointmentsPage() {
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState("default"); 
 
-  // Fetch doctors (handles initial load and search queries)
+  // Fetch doctors
   const fetchDoctors = (searchQuery = "") => {
     const url = searchQuery 
       ? `${process.env.NEXT_PUBLIC_BASE_URL}/doctors?search=${encodeURIComponent(searchQuery)}`

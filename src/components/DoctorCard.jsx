@@ -35,7 +35,7 @@ const DoctorCard = ({ doctor }) => {
         </div>
       </Card.Header>
 
-      {/* 2. Content (Formerly CardBody - renamed to Card.Content in v3) */}
+      {/* 2. Content*/}
       <Card.Content className="py-2 overflow-hidden">
         <div className="relative w-full h-48 rounded-xl overflow-hidden bg-slate-100">
           <Image

@@ -119,7 +119,7 @@ export default function DoctorDetails({ params }) {
           </div>
         </div>
 
-        {/* Doctor Details Profile (Right Column) */}
+        {/* Doctor Details Profile*/}
         <div className="md:col-span-8 flex flex-col gap-6 ">
           
           {/* Biography */}
