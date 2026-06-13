@@ -98,9 +98,9 @@ export default function DoctorDetails({ params }) {
     <div className="container mx-auto px-4 py-10 max-w-5xl pb-20">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         
-        {/* Doctor Photo & Brief (Left Column) */}
+        {/* Doctor Photo & Brief */}
         <div className="md:col-span-4 bg-slate-50 p-6 rounded-3xl shadow-purple-800 shadow-sm border border-slate-100 flex flex-col items-center text-center gap-4">
-          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
+          <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-cyan-600 shadow-xl/50 border border-slate-200">
             <Image
               src={doctor.image || "https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&w=600&q=80"}
               alt={doctor.name || "alt"}

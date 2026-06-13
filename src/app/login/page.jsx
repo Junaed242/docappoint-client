@@ -1,18 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Card, Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { useRouter } from "next/navigation";
+import { Card, Button, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 
 const LoginPage = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
-
-  const redirectUrl = searchParams.get("callbackUrl") || "/";
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -28,8 +25,8 @@ const LoginPage = () => {
 
     if (data) {
       toast.success("Login successful!");
-      router.push(redirectUrl);
-      router.refresh();  
+      router.push("/"); 
+      router.refresh();
     }
 
     if (error) {
@@ -41,7 +38,7 @@ const LoginPage = () => {
   const handleGoogleSignin = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: redirectUrl,
+      callbackURL: "/",
     });
   };
 
@@ -57,7 +54,7 @@ const LoginPage = () => {
           
           {/* Email Field */}
           <TextField
-            isRequired
+            required
             name="email"
             type="email"
             validate={(value) => {
@@ -73,7 +70,7 @@ const LoginPage = () => {
           </TextField>
 
           {/* Password Field */}
-          <TextField isRequired name="password" type="password">
+          <TextField required name="password" type="password">
             <Label className="text-sm font-semibold text-slate-700">Password</Label>
             <Input placeholder="Enter your password" className="w-full px-3 py-2 border rounded-xl" />
             <FieldError className="text-xs text-danger mt-1" />
@@ -82,14 +79,12 @@ const LoginPage = () => {
           <Button
             type="submit"
             variant="primary"
-            className="w-full font-bold h-12 text-md mt-2"
-            isPending={loading} 
+            className="w-full bg-primary text-white font-bold h-12 rounded-xl mt-4"
+            isPending={loading}
           >
             Login
           </Button>
         </Form>
-
-        
 
         {/* Google Signin Button */}
         <div>
@@ -103,7 +98,7 @@ const LoginPage = () => {
         </div>
 
         <p className="text-center text-sm text-slate-500 mt-6">
-          Don&apos;t have an account?{" "}
+          Don't have an account?{" "}
           <Link href="/register" className="text-primary font-bold hover:underline">
             Register
           </Link>

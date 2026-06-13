@@ -21,9 +21,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full antialiased">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} suppressHydrationWarning min-h-full flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-full flex flex-col`}
       >
         <Navbar />
         
