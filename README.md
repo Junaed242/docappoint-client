@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DocAppoint - Doctor Appointment Manager
 
-## Getting Started
+DocAppoint is a medical appointment scheduling platform built as a full-stack, decoupled application. Patients can browse medical specialists, search for physicians by name, filter by consulting fees, book appointments, and manage their schedules securely from a private user dashboard.
 
-First, run the development server:
+## 🚀 Live Site Link
+**Live Application URL:** [https://docappoint-client-eight.vercel.app/](https://docappoint-client-eight.vercel.app/)
+**Server URL:** [https://docappoint-server-ten.vercel.app/](https://docappoint-server-ten.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Key Features
+- **Dynamic SEO Metadata Engine:** Utilizes Next.js Server Components to generate search-engine-optimized titles and descriptions dynamically for each doctor's details page before rendering on the client.
+- **Robust Authentication & Social Sign-In:** Integrated with Better-auth v1.6, supporting custom form credentials (with strict uppercase, lowercase, and length checks) as well as secure Google OAuth handshakes.
+- **Next.js 16 Secure Routing:** Employs the native server-side `proxy.js` request-interception convention to protect dashboard routes, verifying session validity directly against the MongoDB store.
+- **Zero-Refresh CRUD Operations:** Incorporates reactive state synchronization inside the User Dashboard, allowing patients to add, modify, or delete appointments with immediate UI updates.
+- **Modern Medical UI:** Designed with a responsive grid layout using HeroUI v3 compound components and Tailwind CSS v4.0 design tokens for a consistent, accessible healthcare interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Technology Stack
+- **Frontend Framework:** Next.js 16 (App Router), React 19.
+- **Styling & UI:** Tailwind CSS v4.0, HeroUI v3, DaisyUI, React Icons.
+- **Authentication:** Better-auth v1.6 (MongoDB Adapter), Next.js `proxy.js` interception.
+- **Backend API:** Node.js, Express.js.
+- **Database:** MongoDB Atlas.
